@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta name="generator" content="Hugo 0.135.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Terminal</title>
+    <title>Hackappatoi 23 - The first horseman :: Terminal</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A simple, retro theme for Hugo" />
-<meta name="keywords" content="" />
+<meta name="description" content="For this reverse engineering challenge, we&rsquo;re given a pyc file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file. We can decompile it with https://www.toolnb.com/tools-lang-en/pyc.html. Here&rsquo;s what the decompiled code looks like :
+# uncompyle6 version 3.5.0 # Python bytecode 3.8 (3413) # Decompiled from: Python 3.7.2 (default, Dec 29 2018, 06:19:36) # [GCC 7.3.0] # Embedded file name: ../thefirsthorseman.py # Size of source mod 2**32: 2794 bytes from time import sleep import codecs print(&#34;You&#39;ve inserted the key you found on the mysterious Laptop and you&#39;ve been teleported to a place you don&#39;t know.&#34;) print(&#39;All you can see is an enormous door keeping a castle safe. You approach it and with a bit of fear proceed to open it.&#39;) print(&#39;In the middle of the hall you see a funny man, it seems the court jester, but still he scares you.&#39;) print(&#34;&#39;SHISH, SHISH&#39; is the only thing he says, and now you realize he is the first horseman, ready to stop you from reaching further in your mission.&#34;) print(&#39;The man walks towards you and tries to hit you multiple times! Avoid his punches!\n&#39;) def shish(): exit(&#34;The funny man manages to hit you. You fall on the ground.\nYou don&#39;t remember anything. All you know now is a word...\nSHISH\n&#34;) f = [&#39;r3st&#39;, &#39;4s_a&#39;, &#39;b3_c&#39;, &#39;m4tt&#39;, &#39;l3t_&#39;] l = [&#39;4ll0&#39;, &#39;30_1&#39;, &#39;7t3_&#39;, &#39;jkin&#39;, &#39;p1ck&#39;] a = [&#39;5_th&#39;, &#39;3_4n&#39;, &#39;1t_1&#39;, &#39;00p5&#39;, &#39;1n_1&#39;] g = [&#39;p1_7&#39;, &#39;3_w0&#39;, &#39;t0g3&#39;, &#39;00_k&#39;, &#39;n0th&#39;] s = [&#39;ear5&#39;, &#39;k!1!&#39;, &#39;1n6!&#39;, &#39;33p5&#39;, &#39;rd_!&#39;] counter = 0 indexes = [] def print_flag(): flag = &#39;&#39; flag &#43;= f[indexes[0]] flag &#43;= l[indexes[1]] flag &#43;= a[indexes[2]] flag &#43;= g[indexes[3]] flag &#43;= s[indexes[4]] flag = &#39;upgs{&#39; &#43; flag &#43; &#39;}&#39; flag = codecs.encode(flag, &#39;rot13&#39;) print(flag) try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 4: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 2: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 1: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 2: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() else: try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 5: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() else: print(&#39;The man is tired, he just hands you a slip of paper, to open the next door.\nThis is what you read&#39;) print_flag() print(&#34;The man then says his last words...\n &#39;https://youtu.be/XH0CSzdHwg0?si=DOwRhOnorrc-WWIx&#39;&#34;) Get the index from the print_flag function, ROT13 cipher and can easily find the index passed to the array and there we are !
+" />
+<meta name="keywords" content=", " />
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="//localhost:1313/" />
+<link rel="canonical" href="//localhost:1313/posts/hackappatoi-23/" />
 
 
 
@@ -80,22 +81,26 @@
 
 
 <meta property="og:locale" content="en" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Terminal">
-<meta property="og:description" content="A simple, retro theme for Hugo" />
-<meta property="og:url" content="//localhost:1313/" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Hackappatoi 23 - The first horseman">
+<meta property="og:description" content="For this reverse engineering challenge, we&rsquo;re given a pyc file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file. We can decompile it with https://www.toolnb.com/tools-lang-en/pyc.html. Here&rsquo;s what the decompiled code looks like :
+# uncompyle6 version 3.5.0 # Python bytecode 3.8 (3413) # Decompiled from: Python 3.7.2 (default, Dec 29 2018, 06:19:36) # [GCC 7.3.0] # Embedded file name: ../thefirsthorseman.py # Size of source mod 2**32: 2794 bytes from time import sleep import codecs print(&#34;You&#39;ve inserted the key you found on the mysterious Laptop and you&#39;ve been teleported to a place you don&#39;t know.&#34;) print(&#39;All you can see is an enormous door keeping a castle safe. You approach it and with a bit of fear proceed to open it.&#39;) print(&#39;In the middle of the hall you see a funny man, it seems the court jester, but still he scares you.&#39;) print(&#34;&#39;SHISH, SHISH&#39; is the only thing he says, and now you realize he is the first horseman, ready to stop you from reaching further in your mission.&#34;) print(&#39;The man walks towards you and tries to hit you multiple times! Avoid his punches!\n&#39;) def shish(): exit(&#34;The funny man manages to hit you. You fall on the ground.\nYou don&#39;t remember anything. All you know now is a word...\nSHISH\n&#34;) f = [&#39;r3st&#39;, &#39;4s_a&#39;, &#39;b3_c&#39;, &#39;m4tt&#39;, &#39;l3t_&#39;] l = [&#39;4ll0&#39;, &#39;30_1&#39;, &#39;7t3_&#39;, &#39;jkin&#39;, &#39;p1ck&#39;] a = [&#39;5_th&#39;, &#39;3_4n&#39;, &#39;1t_1&#39;, &#39;00p5&#39;, &#39;1n_1&#39;] g = [&#39;p1_7&#39;, &#39;3_w0&#39;, &#39;t0g3&#39;, &#39;00_k&#39;, &#39;n0th&#39;] s = [&#39;ear5&#39;, &#39;k!1!&#39;, &#39;1n6!&#39;, &#39;33p5&#39;, &#39;rd_!&#39;] counter = 0 indexes = [] def print_flag(): flag = &#39;&#39; flag &#43;= f[indexes[0]] flag &#43;= l[indexes[1]] flag &#43;= a[indexes[2]] flag &#43;= g[indexes[3]] flag &#43;= s[indexes[4]] flag = &#39;upgs{&#39; &#43; flag &#43; &#39;}&#39; flag = codecs.encode(flag, &#39;rot13&#39;) print(flag) try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 4: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 2: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 1: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 2: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() else: try: for t in range(1, 6): print(f&#34;{t}...&#34;) counter = t sleep(1) shish() except KeyboardInterrupt: if counter == 5: print(&#39;\nYou dodged it\n&#39;) indexes.append(counter - 1) else: shish() else: print(&#39;The man is tired, he just hands you a slip of paper, to open the next door.\nThis is what you read&#39;) print_flag() print(&#34;The man then says his last words...\n &#39;https://youtu.be/XH0CSzdHwg0?si=DOwRhOnorrc-WWIx&#39;&#34;) Get the index from the print_flag function, ROT13 cipher and can easily find the index passed to the array and there we are !
+" />
+<meta property="og:url" content="//localhost:1313/posts/hackappatoi-23/" />
 <meta property="og:site_name" content="Terminal" />
 
-  <meta property="og:image" content="//localhost:1313/og-image.png">
+  
+  
+  <meta property="og:image" content="//localhost:1313/">
 
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 
 
+  <meta property="article:published_time" content="2023-12-10 16:39:17 &#43;0200 &#43;0200" />
 
 
 
-  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Terminal" />
 
 
 
@@ -167,41 +172,28 @@
 
   <div class="content">
     
+<article class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/hackappatoi-23/">Hackappatoi 23 - The first horseman</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2023-12-10</time></div>
+
   
-  <div class="posts">
-    
-    
-
-    
-    
+    <span class="post-tags">
       
-    
-    
-
-    
-      <article class="post on-list">
-        <h2 class="post-title">
-          <a href="//localhost:1313/posts/hackappatoi-23/">Hackappatoi 23 - The first horseman</a>
-        </h2>
-
-        <div class="post-meta"><time class="post-date">2023-12-10</time></div>
-
-        
-          <span class="post-tags">
-            
-            #<a href="//localhost:1313/tags/ctf/">ctf</a>&nbsp;
-            
-            #<a href="//localhost:1313/tags/reverse-engineering/">reverse-engineering</a>&nbsp;
-            
-          </span>
-        
-
-        
+      #<a href="//localhost:1313/tags/ctf/">ctf</a>&nbsp;
+      
+      #<a href="//localhost:1313/tags/reverse-engineering/">reverse-engineering</a>&nbsp;
+      
+    </span>
+  
+  
 
 
-        <div class="post-content">
-          
-            <p>For this reverse engineering challenge, we&rsquo;re given a <code>pyc</code> file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file.
+  
+
+  <div class="post-content"><div>
+        <p>For this reverse engineering challenge, we&rsquo;re given a <code>pyc</code> file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file.
 We can decompile it with <a href="https://www.toolnb.com/tools-lang-en/pyc.html">https://www.toolnb.com/tools-lang-en/pyc.html</a>. Here&rsquo;s what the decompiled code looks like :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Python" data-lang="Python"><span style="display:flex;"><span><span style="color:#75715e"># uncompyle6 version 3.5.0</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Python bytecode 3.8 (3413)</span>
@@ -316,25 +308,19 @@ We can decompile it with <a href="https://www.toolnb.com/tools-lang-en/pyc.html"
 </span></span><span style="display:flex;"><span>        print_flag()
 </span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The man then says his last words...</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> &#39;https://youtu.be/XH0CSzdHwg0?si=DOwRhOnorrc-WWIx&#39;&#34;</span>)
 </span></span></code></pre></div><p>Get the index from the print_flag function, ROT13 cipher and can easily find the index passed to the array and there we are !</p>
-          
-        </div>
 
-        
-          <div>
-            <a class="read-more button inline" href="/posts/hackappatoi-23/">Read more</a>
-          </div>
-        
-      </article>
+      </div></div>
+
+  
     
 
-    <div class="pagination">
-  <div class="pagination__buttons">
-    
-    
-  </div>
-</div>
+  
 
-  </div>
+  
+    
+
+  
+</article>
 
   </div>
 
