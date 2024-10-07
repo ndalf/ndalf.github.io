@@ -1,7 +1,7 @@
 +++
 title = "Hackappatoi 23 - The first horseman"
 date = "2023-12-10T16:39:17+02:00"
-draft = true
+draft = false
 tags = ["ctf", "reverse-engineering"]
 keywords = ["", ""]
 description = ""
