@@ -8,7 +8,16 @@
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2024-05-06T16:54:58+02:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/tags/pwn/</loc>
+    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/reverse-engineering/</loc>
+    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/posts/shc-2024_farm-life/</loc>
+    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/shc-2024_office-program/</loc>
     <lastmod>2024-05-06T16:54:58+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/shc-2024/</loc>
@@ -24,9 +33,6 @@
     <lastmod>2023-12-10T16:39:17+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/hackappatoi-23/</loc>
-    <lastmod>2023-12-10T16:39:17+02:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/reverse-engineering/</loc>
     <lastmod>2023-12-10T16:39:17+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/categories/</loc>
