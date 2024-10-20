@@ -3,7 +3,7 @@
 <head>
 	<meta name="generator" content="Hugo 0.135.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>ndalf - writeups</title>
+    <title>Terminal</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,18 @@
 
 <link rel="canonical" href="//localhost:1313/" />
 
+
+
+
+
+  
   <link rel="stylesheet" href="//localhost:1313/css/buttons.min.2bc533403a27dfe0e93105a92502b42ce4587e2e4a87d9f7d349e51e16e09478.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/code.min.00125962708925857e7b66dbc58391d55be1191a3d0ce2034de8c9cd2c481c36.css">
 
   
-  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.90c955c31dd7c0e05aae3d4f583d4d8a2af799d69c961337eaf2a825063a55dd.css">
+  <link rel="stylesheet" href="//localhost:1313/css/fonts.min.4881f0c525f3ce2a1864fb6e96676396cebe1e6fcef1933e8e1dde7041004fb5.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/footer.min.2e3eb191baee58dd05a9f0104ac1fab0827bca7c64dafe0b2579f934c33a1d69.css">
@@ -32,7 +37,7 @@
   <link rel="stylesheet" href="//localhost:1313/css/header.min.b6fb4423cf82a9f9d7abc9cd010223fa3d70a6526a3f28f8e17d814c06e18f9e.css">
 
   
-  <link rel="stylesheet" href="//localhost:1313/css/main.min.1d8be2dd1b5de9fdaed058c8c59fcf4485f36619574abfb47ed0cfda4812c16d.css">
+  <link rel="stylesheet" href="//localhost:1313/css/main.min.fe8dc560fccb53a458b0db19ccb7b265764ac46b68596b7e099c6793054dd457.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/menu.min.83637a90d903026bc280d3f82f96ceb06c5fc72b7c1a8d686afb5bbf818a29f7.css">
@@ -50,10 +55,15 @@
   <link rel="stylesheet" href="//localhost:1313/css/syntax.min.cc789ed9377260d7949ea4c18781fc58959a89287210fe4edbff44ebfc1511b6.css">
 
   
-  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.981c523c03568d268ff9d99991bcbb309e46db693baffdac65fe48b751e580bb.css">
+  <link rel="stylesheet" href="//localhost:1313/css/terminal.min.dd0bf9c7cacb24c1b0184f52f1869b274e06689557468cc7030ccf632328eb97.css">
 
   
   <link rel="stylesheet" href="//localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
 
 
 <link rel="shortcut icon" href="//localhost:1313/favicon.png">
@@ -61,11 +71,6 @@
 
 
 <meta name="twitter:card" content="summary" />
-
-  
-    <meta name="twitter:site" content="" />
-  
-    <meta name="twitter:creator" content="" />
 
 
 
@@ -106,7 +111,7 @@
     <div class="header__logo">
       <a href="/">
   <div class="logo">
-    ndalf
+    Terminal
   </div>
 </a>
 
@@ -236,6 +241,106 @@
         
           <div>
             <a class="read-more button inline" href="/posts/shc-2024_farm-life/">Read more</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h2 class="post-title">
+          <a href="//localhost:1313/posts/shc-2024_office-program/">Shc 2024 - Office program</a>
+        </h2>
+
+        <div class="post-meta"><time class="post-date">2024-05-06</time></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="//localhost:1313/tags/shc-2024/">SHC-2024</a>&nbsp;
+            
+            #<a href="//localhost:1313/tags/pwn/">pwn</a>&nbsp;
+            
+            #<a href="//localhost:1313/tags/reverse-engineering/">reverse-engineering</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+        <div class="post-content">
+          
+            <p>This was the easiest pwn challenge of the ctf. It didn’t require any overflow or anything.</p>
+<p>Here’s the most interesting part of the program :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Select an action:&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;0 - Exit (like leaving the offic…&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;1 - Print favourite excel column&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;2 - Call Rebecca from front desk&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;3 - Get secret sauce (only for f…&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Enter your choice: &#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int32_t</span> input; <span style="color:#75715e">// Lost a lot of time trying to figure out if this was overflowable
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">__isoc99_scanf</span>(<span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>input);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">important_work_or_attend_a_meeting</span>();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (input <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (input <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Input out of range. You confus…&#34;</span>);
+</span></span><span style="display:flex;"><span>    input <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>(input);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>input <span style="color:#f92672">=</span> (input <span style="color:#f92672">+</span> <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (input <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">Input out of range. You confus…&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">print_flag</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The goal is to reach the <code>print_flag</code> function. To do so, we have to send the program a value that will be transformed in its negative value. After, 5 will be added to that value, and after this that number has to be less than zero to call the function. At first I thought that sending any negative number less than 5 would make the cut, but it did not, simply because the scanf function expects a <code>%d</code>, thus an integer.</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button inline" href="/posts/shc-2024_office-program/">Read more</a>
+          </div>
+        
+      </article>
+    
+      <article class="post on-list">
+        <h2 class="post-title">
+          <a href="//localhost:1313/posts/shc-2024_printer-destroyer-format/">Shc 2024_printer Destroyer Format</a>
+        </h2>
+
+        <div class="post-meta"><time class="post-date">2024-05-06</time></div>
+
+        
+          <span class="post-tags">
+            
+            #<a href="//localhost:1313/tags/shc-2024/">SHC-2024</a>&nbsp;
+            
+            #<a href="//localhost:1313/tags/reverse-engineering/">reverse-engineering</a>&nbsp;
+            
+          </span>
+        
+
+        
+
+
+        <div class="post-content">
+          
+            <blockquote>
+<p>I received a todo list from IT which I really need to complete.<br>
+Clippy is telling lies and says it is not safe to open this PDF :(<br>
+Stupid Clippy</p>
+</blockquote>
+<p>For that challenge, we got a pdf file in which we can expect some sort of macro if we believe what we’re told in the intro.</p>
+<p>The tool <code>pdfextract</code> from the origami repository is incredibly helpful, as it extracts everything we might be interested in for a ctf challenge : images, streams, scripts and attachments, and creates a directory in which it puts everything.</p>
+          
+        </div>
+
+        
+          <div>
+            <a class="read-more button inline" href="/posts/shc-2024_printer-destroyer-format/">Read more</a>
           </div>
         
       </article>
