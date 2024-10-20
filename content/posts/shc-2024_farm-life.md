@@ -57,11 +57,11 @@ if __name__ == "__main__":
 
 First thing to do : get the encrypted flag. If we encrypt a message first, the key will be regenerated, as commented in the code.
 
-So, we select command 2 and get our encrypted flag, e.g. `011110001110000110110110101111011000010001110010011100101001001000000010111001011110010001100010011111100111000111110111100100011111010110110101111010010100111100110010111010001001110111010011001111011000111000010100010010011011101111100101000111101001100000101010000010011101011110100010101000110100110`.
+So, we select command 2 and get our encrypted binary flag, that we'll use as a variable for our next python script. 
 
 Now, we store it somewhere for later, and create a 365-bits long string filled with 1s (print('1'*365) in python). It will allow us to find back the key, as the cipher produced is nothing more than a xor operation of our input with that key, right ?
 
-We save the output again, e.g. `01100001110011101000111100100110000110111110100111100101100110110110001111000010110100110010001100101101010001001101010010110000110101101000100010101000001000000000111111011111110111001010111001111100111001110110000100000100111110101001000000101011101101010001111100111100111110101000001110001100010010010101011101100001010010111001111111111111111100101011110101000`
+We get a binary output again, let's keep it close, we'll need it soon. 
 
 Now that we’ve got all our ingredients, let’s start cooking ! We can take back some stuff from the python script that we’ll reuse as it is for our final script, like the encrypt function that also serves for decryption as it’s just a xor. Here’s how that python script looks like :
 
