@@ -1,8 +1,8 @@
 +++
-title = 'Shc 2024_printer Destroyer Format'
+title = 'SHC 2024 Printer Destroyer Format'
 date = 2024-05-06T02:59:11+02:00
 draft = false
-tags = ["SHC-2024", "reverse-engineering"]
+tags = ["SHC-2024", "reverse-engineering", "CVE-2018-9958"]
 description = ""
 showFullContent = false
 +++
@@ -11,7 +11,7 @@ showFullContent = false
 > Clippy is telling lies and says it is not safe to open this PDF :(  
 > Stupid Clippy  
 
-For that challenge, we got a pdf file in which we can expect some sort of macro if we believe what we’re told in the intro.
+This one of my favourites challenges of this year's SHC. We got an apparently simple PDF file in which we can expect some sort of macro if we believe what we’re told in the intro.
 
 The tool `pdfextract` from the origami repository is incredibly helpful, as it extracts everything we might be interested in for a ctf challenge : images, streams, scripts and attachments, and creates a directory in which it puts everything.
 
