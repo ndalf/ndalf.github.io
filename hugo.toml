@@ -4,11 +4,14 @@ languageCode = "en-us"
 # Remove it if you use the theme as a remote Hugo Module.
 theme = "terminal"
 paginate = 5
+title = "ndalf - writeups"
 
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
+
+  themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
