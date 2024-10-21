@@ -8,7 +8,7 @@ description = ""
 showFullContent = false
 +++
 
-# For this reverse engineering challenge, we're given a `pyc` file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file. 
+For this reverse engineering challenge, we're given a `pyc` file. I had never encountered this filetype before, but after some research, it appears to be a compiled python file. 
 We can decompile it with [https://www.toolnb.com/tools-lang-en/pyc.html](https://www.toolnb.com/tools-lang-en/pyc.html). Here's what the decompiled code looks like :
 
 ```Python
