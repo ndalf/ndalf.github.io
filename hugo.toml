@@ -54,7 +54,7 @@ title = "ndalf - writeups"
     languageName = "English"
     title = "Terminal"
 
-    [languages.en.params]
+     [languages.en.params]
       subtitle = "A simple, retro theme for Hugo"
       owner = ""
       keywords = ""
@@ -70,18 +70,18 @@ title = "ndalf - writeups"
       words = "words"
 
       [languages.en.params.logo]
-        logoText = "Terminal"
+        logoText = "ndalf"
         logoHomeLink = "/"
 
-      [languages.en.menu]
-        [[languages.en.menu.main]]
-          identifier = "about"
-          name = "About"
-          url = "/about"
-        [[languages.en.menu.main]]
-          identifier = "showcase"
-          name = "Showcase"
-          url = "/showcase"
+#      [languages.en.menu]
+#        [[languages.en.menu.main]]
+#          identifier = "about"
+#          name = "About"
+#          url = "/about"
+#        [[languages.en.menu.main]]
+#          identifier = "showcase"
+#          name = "Showcase"
+#          url = "/showcase"
 
 #[module]
   # In case you would like to make changes to the theme and keep it locally in you repository,

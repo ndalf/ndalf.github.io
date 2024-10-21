@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/crypto/</loc>
-    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/posts/</loc>
+    <lastmod>2024-05-10T02:15:19+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/shc-2024_serverless-login/</loc>
+    <lastmod>2024-05-10T02:15:19+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
+    <lastmod>2024-05-10T02:15:19+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2024-05-10T02:15:19+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/web/</loc>
+    <lastmod>2024-05-10T02:15:19+02:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/crypto/</loc>
     <lastmod>2024-05-06T16:54:58+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/pwn/</loc>
@@ -21,12 +33,6 @@
     <lastmod>2024-05-06T16:54:58+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/shc-2024/</loc>
-    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
-    <lastmod>2024-05-06T16:54:58+02:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/</loc>
     <lastmod>2024-05-06T16:54:58+02:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/cve-2018-9958/</loc>

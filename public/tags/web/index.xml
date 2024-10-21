@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Terminal</title>
+    <link>//localhost:1313/tags/web/</link>
+    <description>Recent content in Web on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 May 2024 02:15:19 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SHC 2024 - Serverless Login</title>
+      <link>//localhost:1313/posts/shc-2024_serverless-login/</link>
+      <pubDate>Fri, 10 May 2024 02:15:19 +0200</pubDate>
+      
+      <guid>//localhost:1313/posts/shc-2024_serverless-login/</guid>
+      <description>&lt;p&gt;In this web chall, we have a simple login portal in which we’re asked to enter our username and password. Looking a bit at the code, we see two interesting things : first, this link in an undisplayed div : &lt;a href=&#34;http://tinyurl.com/47vu98x9&#34;&gt;http://tinyurl.com/47vu98x9&lt;/a&gt; (i’ve been rickrolled, you will too.). Second, at the bottom we have the link to the script that manages the input :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-HTML&#34; data-lang=&#34;HTML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;py&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./main.py&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./pyscript.json&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The main.py file is, as expected, what handles our input. It looks in a database and compares the hashed input to the password. In the pyscript.json file, we have a link pointing to the database, that we can simply use to download it and check the values stored in it.&lt;/p&gt;</description>
+      <content>&lt;p&gt;In this web chall, we have a simple login portal in which we’re asked to enter our username and password. Looking a bit at the code, we see two interesting things : first, this link in an undisplayed div : &lt;a href=&#34;http://tinyurl.com/47vu98x9&#34;&gt;http://tinyurl.com/47vu98x9&lt;/a&gt; (i’ve been rickrolled, you will too.). Second, at the bottom we have the link to the script that manages the input :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-HTML&#34; data-lang=&#34;HTML&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;py&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./main.py&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./pyscript.json&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The main.py file is, as expected, what handles our input. It looks in a database and compares the hashed input to the password. In the pyscript.json file, we have a link pointing to the database, that we can simply use to download it and check the values stored in it.&lt;/p&gt;
+&lt;p&gt;We have the valid username that isn’t hashed : admin, and a hash : &lt;code&gt;11a4a60b518bf24989d481468076e5d5982884626aed9faeb35b8576fcd223e1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now we just have to convert it back to text and we got a super nice password.&lt;/p&gt;
+&lt;p&gt;The portal gives us the expected flag : &lt;code&gt;shc2024{wh0_N33d5_4_53RV3r_4nYw4Y2?}&lt;/code&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

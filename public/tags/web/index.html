@@ -2,7 +2,7 @@
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   
-    <title>Tags :: Terminal</title>
+    <title>Web :: Terminal</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 
   <meta name="robots" content="noodp" />
 
-<link rel="canonical" href="//localhost:1313/tags/" />
+<link rel="canonical" href="//localhost:1313/tags/web/" />
 
 
 
@@ -75,9 +75,9 @@
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Tags">
+<meta property="og:title" content="Web">
 <meta property="og:description" content="" />
-<meta property="og:url" content="//localhost:1313/tags/" />
+<meta property="og:url" content="//localhost:1313/tags/web/" />
 <meta property="og:site_name" content="Terminal" />
 
   <meta property="og:image" content="//localhost:1313/og-image.png">
@@ -89,7 +89,7 @@
 
 
 
-  <link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="Terminal" />
+  <link href="/tags/web/index.xml" rel="alternate" type="application/rss+xml" title="Terminal" />
 
 
 
@@ -161,69 +161,50 @@
 
   <div class="content">
     
-  <div class="terms">
-    <h1>Tags</h1>
+  <h1>Posts for: #Web</h1>
+  
+  <div class="posts">
     
-    <ul>
-      
-      
+      <article class="post on-list">
+        <h1 class="post-title">
+          <a href="//localhost:1313/posts/shc-2024_serverless-login/">SHC 2024 - Serverless Login</a>
+        </h1>
+        <div class="post-meta"><time class="post-date">2024-05-10</time></div>
+
         
+          <span class="post-tags">
+            
+            #<a href="//localhost:1313/tags/web/">web</a>&nbsp;
+            
+          </span>
         
+
         
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/crypto/">crypto [1]</a>
-          </li>
+
+
+        <div class="post-content">
+          
+            <p>In this web chall, we have a simple login portal in which we’re asked to enter our username and password. Looking a bit at the code, we see two interesting things : first, this link in an undisplayed div : <a href="http://tinyurl.com/47vu98x9">http://tinyurl.com/47vu98x9</a> (i’ve been rickrolled, you will too.). Second, at the bottom we have the link to the script that manages the input :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;py&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./main.py&#34;</span> <span style="color:#a6e22e">config</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./pyscript.json&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>The main.py file is, as expected, what handles our input. It looks in a database and compares the hashed input to the password. In the pyscript.json file, we have a link pointing to the database, that we can simply use to download it and check the values stored in it.</p>
+          
+        </div>
+
         
-      
+          <div>
+            <a class="read-more button inline" href="/posts/shc-2024_serverless-login/">Read more</a>
+          </div>
         
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/ctf/">ctf [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/cve-2018-9958/">CVE-2018-9958 [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/pwn/">pwn [1]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/reverse-engineering/">reverse-engineering [3]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/shc-2024/">SHC-2024 [3]</a>
-          </li>
-        
-      
-        
-        
-        
-          <li>
-            <a class="terms-title" href="//localhost:1313/tags/web/">web [1]</a>
-          </li>
-        
-      
-    </ul>
+      </article>
+    
+
+    <div class="pagination">
+  <div class="pagination__buttons">
+    
+    
+  </div>
+</div>
+
   </div>
 
   </div>
