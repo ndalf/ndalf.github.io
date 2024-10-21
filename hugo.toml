@@ -11,10 +11,8 @@ title = "ndalf - writeups"
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
-  themeColor = "blue"
-
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 0
 
   # show selector to switch language
   showLanguageSelector = false
