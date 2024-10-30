@@ -40,7 +40,7 @@ title = "ndalf - writeups"
 
   # whether to show a table of contents
   # can be overridden in a page's front-matter
-  Toc = false
+  Toc = true
 
   # set title for the table of contents
   # can be overridden in a page's front-matter
