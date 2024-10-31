@@ -50,7 +50,7 @@ title = "ndalf - writeups"
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Terminal"
+    title = "ndalf - writeups"
 
      [languages.en.params]
       subtitle = "A simple, retro theme for Hugo"
